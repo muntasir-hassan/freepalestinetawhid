@@ -1,0 +1,357 @@
+/* =======================
+   GLOBAL RESET
+======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  color: white;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* =======================
+   NAVBAR (MOBILE FIRST)
+======================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+
+  background: linear-gradient(
+    to right,
+    black 33%,
+    white 33%,
+    white 66%,
+    green 66%
+  );
+
+  border-bottom: 4px solid red;
+  position: relative;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+}
+
+.menu-toggle {
+  font-size: 26px;
+  cursor: pointer;
+  color: black;
+}
+
+/* NAV LINKS (MOBILE DROPDOWN) */
+.nav-links {
+  list-style: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 220px;
+  background: #111;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  gap: 15px;
+  border-left: 2px solid red;
+  z-index: 999;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+/* =======================
+   HERO
+======================= */
+.hero {
+  text-align: center;
+  padding: 15px;
+}
+
+.mobile-img {
+  width: 100%;
+  height: auto;
+  border-bottom: 3px solid red;
+  display: block;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* FLAG TITLE */
+.hero-title {
+  font-size: 26px;
+  margin-top: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  word-break: break-word;
+}
+
+/* COLORS */
+.black { color: black; background: white; padding: 2px 6px; }
+.white { color: white; background: black; padding: 2px 6px; }
+.green { color: green; padding: 2px 6px; }
+.red { color: red; padding: 2px 6px; }
+
+/* =======================
+   CTA / BKASH STYLE SECTIONS
+======================= */
+.cta,
+.bkash,
+.message {
+
+  padding: 20px 15px;
+  background: #111;
+  margin-top: 10px;
+}
+.message h2{
+  color: #f80000;
+}
+.bkash {
+  text-align: center;
+}
+.bkash-box{
+  margin-bottom: 6px;
+}
+
+.note{
+  color: #ff060c;
+}
+/* =======================
+   IMPACT
+======================= */
+.impact {
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 15px;
+  border-left: 4px solid green;
+  border-radius: 8px;
+}
+
+/* =======================
+   COUNTER
+======================= */
+.counter {
+  margin-top: 15px;
+  text-align: center;
+  padding: 15px;
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+.counter h1 {
+  color: green;
+  font-size: 30px;
+}
+
+/* =======================
+   BKASH SECTION
+======================= */
+.bkash-box {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.bkash-box span {
+  background: #1a1a1a;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: bold;
+  border-left: 4px solid #e2136e;
+}
+
+.bkash-box button {
+  padding: 10px 15px;
+  border: none;
+  background: #e2136e;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: black;
+  border-top: 2px solid red;
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* =======================
+   TABLET / DESKTOP
+======================= */
+@media (min-width: 768px) {
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card {
+    width: 220px;
+  }
+
+  /* NAV DESKTOP */
+  .nav-links {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    gap: 20px;
+    border: none;
+  }
+
+  .nav-links li a {
+    color: black;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* =======================
+   SMALL MOBILE FIX
+======================= */
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 22px;
+  }
+
+  .bkash-box {
+    flex-direction: column;
+  }
+}
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+/* =======================
+   REFERRAL SECTION
+======================= */
+.referral {
+  padding: 25px 15px;
+  background: #0f0f0f;
+  text-align: center;
+}
+
+.referral h2 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* Card */
+.ref-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid red;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Profile image */
+.ref-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid green;
+}
+
+/* Text */
+.ref-content h3 {
+  margin-bottom: 5px;
+  color: white;
+}
+
+.ref-content p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Mobile fix */
+@media (max-width: 480px) {
+  .ref-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ref-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* =======================
+   FOOTER CREDIT
+======================= */
+.footer-credit {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-credit strong {
+  color: white;
+}
+
+.footer-credit a {
+  color: #e2136e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-credit a:hover {
+  text-decoration: underline;
+}

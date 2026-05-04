@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Palestine - Eid Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="freepalestine.png" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="freepalestine.png" alt="Free Palestine Logo" />
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#impact">Impact</a></li>
+
+          <li><a href="#bkash">Donate</a></li>
+          <li>
+            <a href="https://wa.me/8801903158988" target="_blank">WhatsApp</a>
+          </li>
+        </ul>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <main>
+      <section class="hero" id="hero">
+        <img
+          src="photorealistic-kid-refugee-camp.jpg"
+          alt="Refugee child"
+          class="mobile-img"
+        />
+
+        <h1 class="hero-title">
+          <span class="black">Where</span>
+          <span class="white">is</span>
+          <span class="green">our</span>
+          <span class="red">eidi</span>❓
+        </h1>
+
+        <p>You say you’d sacrifice for people—then start with your Eidi.</p>
+      </section>
+
+      <!-- ================= CTA IDEA ================= -->
+      <section class="bkash" id="bkash">
+        <h2>Send Your Eidi</h2>
+        <p class="note1">
+          Use the number below to send your contribution via bKash:
+        </p>
+
+        <div class="bkash-box">
+          <span id="bkash-number">01903158988</span>
+          <button onclick="copyNumber()">Copy</button>
+        </div>
+
+        <p class="note">Only for people who personally know me.(Mayaz)</p>
+      </section>
+
+      <section class="referral">
+        <h2>Referred By</h2>
+
+        <div class="ref-card">
+          <img src="download.jpg" alt="Profile" class="ref-img" />
+
+          <div class="ref-content">
+            <h3>Habibur Rahman Tawhid</h3>
+            <p>Bro learns HTML once and thinks he’s saving the world 😭</p>
+          </div>
+        </div>
+      </section>
+      <!-- ================= IMPACT ================= -->
+      <section class="impact" id="impact">
+        <h2>What Your Eidi Can Become</h2>
+
+        <div class="cards">
+          <div class="card">🍞 Food for families</div>
+          <div class="card">🏥 Medical support</div>
+          <div class="card">🏠 Shelter aid</div>
+          <div class="card">💧 Clean water</div>
+        </div>
+      </section>
+
+      <!-- ================= MESSAGE ================= -->
+      <section class="message">
+        <h2>My Message</h2>
+
+        <p>
+          This page is only for people who know me personally (Mayaz). The goal
+          is simple: instead of spending all Eid money, we try to turn a small
+          part of it into help for our brothers, sisters and kids 😅.
+          <br /><br />
+          I am still figuring out the exact system and organization I'll use. If
+          plan fails, the money will still go to mosques or orphan support.
+          <br /><br />
+          I will always try to be transparent with everything I do.
+        </p>
+
+        <!-- ================= COUNTER ================= -->
+        <div class="counter">
+          <h3>Raised so far</h3>
+          <h1>৳70</h1>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <p>Made with intention. Not perfection.</p>
+
+      <p class="footer-credit">
+        Built by <strong>Mayaz Hassan</strong> |
+        <a href="https://facebook.com/" target="_blank">Facebook</a>
+      </p>
+    </footer>
+
+    <!-- ================= SCRIPT ================= -->
+    <script>
+      const menu = document.querySelector(".nav-links");
+      const toggle = document.querySelector(".menu-toggle");
+
+      function toggleMenu() {
+        menu.classList.toggle("active");
+      }
+
+      // close menu on link click
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("active");
+        });
+      });
+
+      // close when clicking outside
+
+      document.addEventListener("click", (e) => {
+        if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+          menu.classList.remove("active");
+        }
+      });
+
+      function copyNumber() {
+        const number = document.getElementById("bkash-number").innerText;
+        navigator.clipboard.writeText(number);
+        alert("bKash number copied!");
+      }
+    </script>
+  </body>
+</html>
